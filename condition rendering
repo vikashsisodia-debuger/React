@@ -1,0 +1,18 @@
+import { useState } from "react";
+function App() {
+  const [loginStatus,setLoginStatus] = useState(false); //  use state for login
+  function setStatus() {
+    setLoginStatus(x => !x); // value ko toggle kar do simple
+  }
+  return(
+    <>
+    {!loginStatus ? <h1>Please Login</h1> : <h1>Welcome Back</h1>}
+    <button onClick={() => setStatus()}>
+      {
+        !loginStatus ? "Login" : "Logout"
+      }
+    </button>
+    </>
+  )
+}
+export default App;
