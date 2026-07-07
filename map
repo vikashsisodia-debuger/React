@@ -1,0 +1,40 @@
+import {useState} from "react";
+function App() {
+  const arr = ["vikash","rohit","mohan","kamal"];
+  return(
+    <>
+    {
+      arr.map((s) => {
+        return <h1>{s}</h1> // ak ak karke sabhi ko print kar dega ye 
+      }) // with the help of map
+    }
+    </>
+  )
+}
+export default App;
+
+
+ // Mapping Objects
+import {useState} from "react";
+function App() {
+  const mobile = [
+    {id : 1,Name : "Apple",Price : "100k"},
+    {id : 2,Name : "Samsung",Price : "50k"},
+    {id : 3,Name : "OnePlus",Price : "30k"}]
+    return(
+      <>
+      {/* Java Scrit ka code he toh curly braces me karunga */}
+      {
+        mobile.map((m) => {
+          return(
+            <>
+            <h1>{m.Name}</h1>
+            <h2>{m.Price}</h2>
+            </>
+          )
+        })
+      }
+      </>
+    )
+}
+export default App;
